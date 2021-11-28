@@ -1,14 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Project for BluePrism recruitment process.
 
-## Getting Started
+# Tech Stack
 
-First, run the development server:
+## Libraries
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- NextJS
+- Typescript
+- react-query
+- styled-component
+
+## Environment
+
+- Git
+- Prettier
+- Eslint
+- Commitizen
+- Jest
+- Cypress
+
+## Host
+
+- Amplify
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
