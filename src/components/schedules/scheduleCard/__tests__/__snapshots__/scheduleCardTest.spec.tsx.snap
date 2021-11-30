@@ -1,0 +1,475 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
+<DocumentFragment>
+  .c2 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 30px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 20vw;
+  margin-top: 1vw;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1vw;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1vw 1vw 0 1vw;
+}
+
+.c3 {
+  margin-left: 1vw;
+  font-family: 'Roboto',sans-serif;
+  font-size: 1vw;
+}
+
+.c7 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 {
+  -webkit-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1vw;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c14 {
+  height: 50px;
+  width: 50%;
+  border-radius: 30px;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  background-color: #34eb5c;
+}
+
+.c10 {
+  font-size: 1em;
+  font-family: Robotosans-serif;
+}
+
+.c12 {
+  visibility: hidden;
+  display: none;
+}
+
+.c8 .c9:hover + .c11 {
+  visibility: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  background-color: #e8f5f9;
+  width: 15vw;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #d0e5ed;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+      data-testid="card-header"
+    >
+      <svg
+        aria-hidden="true"
+        class="c2"
+        data-testid="retired-icon"
+        fill="currentColor"
+        focusable="false"
+        height="1.5vw"
+        viewBox="0 0 512 512"
+        width="1.5vw"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"
+          fill="currentColor"
+        />
+      </svg>
+      <span
+        class="c3"
+        data-testid="schedule-name"
+      >
+        Random Schedule Name (0.2880763882796018)
+      </span>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <span
+          class="c6"
+          data-testid="schedule-id-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-id-type"
+          >
+            Id:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-id-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              81112054
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-description-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-description-type"
+          >
+            Description:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-description-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              amet consectetur dolore d...
+            </span>
+            <div
+              class="c11 c12"
+              data-testid="tooltip"
+            >
+              amet consectetur dolore do esse
+            </div>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-isRetired-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-isRetired-type"
+          >
+            Is Retired:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-isRetired-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              true
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-tasksCount-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-tasksCount-type"
+          >
+            Tasks Count:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-tasksCount-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              10
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-startPoint-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-startPoint-type"
+          >
+            Start Point:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-startPoint-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              2021-12-05T12:51:42.685Z
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-endPoint-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-endPoint-type"
+          >
+            End Point:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-endPoint-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              2021-01-04T10:32:13.462Z
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-dayOfWeek-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-dayOfWeek-type"
+          >
+            Day Of Week:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-dayOfWeek-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              3
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-dayOfMonth-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-dayOfMonth-type"
+          >
+            Day Of Month:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-dayOfMonth-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              10
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-startDate-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-startDate-type"
+          >
+            Start Date:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-startDate-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              2021-02-11T00:31:01.219Z
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-endDate-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-endDate-type"
+          >
+            End Date:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-endDate-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              2021-06-25T06:49:02.658Z
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-intervalType-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-intervalType-type"
+          >
+            Interval Type:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-intervalType-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              Week
+            </span>
+          </div>
+        </span>
+        <span
+          class="c6"
+          data-testid="schedule-timePeriod-container"
+        >
+          <span
+            class="c7"
+            data-testid="schedule-timePeriod-type"
+          >
+            Time Period:
+          </span>
+           
+          <div
+            class="c8"
+            data-testid="schedule-timePeriod-value"
+          >
+            <span
+              class="c9 c10"
+              data-testid="short-text"
+            >
+              28
+            </span>
+          </div>
+        </span>
+      </div>
+      <div
+        class="c13"
+      >
+        <button
+          class="c14"
+          data-testid="retire-button"
+        >
+          unretire
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

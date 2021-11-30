@@ -8,6 +8,7 @@ This is a Project for BluePrism recruitment process.
 - Typescript
 - react-query
 - styled-component
+  - Theme and Components
 
 ## Environment
 
@@ -22,25 +23,19 @@ This is a Project for BluePrism recruitment process.
 
 - Amplify
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commit
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Install Commitzen globally
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Different Things
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- I have created a Tooltip for better visualization if have long text
+- Instead to fetch all Records, just fetch record per schedule. I Believe is better a low loading about any schedule that have a huge loading for all records, which can have leave to several problems
 
-## Learn More
+# Things I could improve
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Remove all the Schedule Logic for Card to make him 100% reusable.
+- Increase the theme file to have a higher standard (border radius, etc.)
+- Better organize the commits (Commit per Component maybe)
+- Test Helpers functions
+- Improve UI - Being transparency, it's not my Strong Skills, so, to have a better UI I will probably create a FIGMA file, to help visualize a better UI.

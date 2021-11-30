@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { HomeTemplate } from 'templates/home';
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return <HomeTemplate />;
 };
 
 export default Home;

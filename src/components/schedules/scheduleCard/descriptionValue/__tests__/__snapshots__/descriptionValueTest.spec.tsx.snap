@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: DescriptionValue should render DescriptionValue component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1em;
+  font-family: Robotosans-serif;
+}
+
+<div
+    class=""
+  >
+    <span
+      class="c0"
+      data-testid="short-text"
+    >
+      small text
+    </span>
+  </div>
+</DocumentFragment>
+`;
