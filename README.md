@@ -39,3 +39,5 @@ Install Commitzen globally
 - Better organize the commits (Commit per Component maybe)
 - Test Helpers functions
 - Improve UI - Being transparency, it's not my Strong Skills, so, to have a better UI I will probably create a FIGMA file, to help visualize a better UI.
+- For some reason, setQueryData for only update one item was not working, so to continue with the test I invalidate the whole QUERY_KEY
+- Pagination and Infinite Scroll is essencial for this project, but the Backend have pagination in their filter, but don't return the current page, so to not complicated, I didn't go far, but is this case is very essential to Schedule expecially in the Logs.

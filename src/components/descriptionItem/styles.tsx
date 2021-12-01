@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 
-export const ScheduleValue = styled.span`
+export const Container = styled.span`
+  flex: 50%;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.size.small};
+  margin-top: 8px;
+`;
+
+export const DescriptionType = styled.span`
+  font-family: ${(props) => props.theme.font};
+  font-weight: bold;
+  font-size: ${(props) => props.theme.size.small};
+`;
+
+export const DescriptionValue = styled.span`
   font-size: ${(props) => props.theme.size.small};
   font-family: ${(props) => props.theme.font};
 `;
@@ -10,8 +23,8 @@ export const TooltipContainer = styled.div`
   display: none;
 `;
 
-export const Container = styled.div`
-  ${ScheduleValue}:hover + ${TooltipContainer} {
+export const DescriptionValueContainer = styled.div`
+  ${DescriptionValue}:hover + ${TooltipContainer} {
     visibility: visible;
     display: flex;
     position: absolute;

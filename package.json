@@ -4,7 +4,7 @@
   "scripts": {
     "build": "yarn clean && next build",
     "clean": "rimraf .next/",
-    "dev": "next dev ./src",
+    "dev": "next dev ./src --port 3001",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "start": "NODE_ENV=production next start",
     "cypress:open": "cypress open",
@@ -13,9 +13,11 @@
     "commit": "cz"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-loading-skeleton": "^3.0.1",
     "react-query": "^3.33.7",
     "styled-components": "^5.3.3",
     "styled-icons": "^10.45.0"
@@ -24,6 +26,7 @@
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",

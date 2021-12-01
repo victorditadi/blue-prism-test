@@ -11,3 +11,9 @@ export const sliceAndUpperCaseString = (keyFromSchedule: string) => {
     .map((key) => key.charAt(0).toUpperCase() + key.slice(1));
   return key ? key.join(' ') : keyFromSchedule;
 };
+
+export const cleanDate = (date?: string) => {
+  if (!date) return undefined;
+  const cleanDate = new Date(date);
+  return `${cleanDate.getMonth() + 1}/${cleanDate.getDate()}/${cleanDate.getFullYear()}`;
+};

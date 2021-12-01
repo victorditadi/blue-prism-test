@@ -1,10 +1,4 @@
-export const cleanDate = (date?: string) => {
-  if (!date) return undefined;
-  const cleanDate = new Date(date);
-  return `${cleanDate.getMonth() + 1}/${cleanDate.getDate()}/${cleanDate.getFullYear()}`;
-};
-
-export interface ISchedule {
+export interface ScheduleBE {
   id: number;
   name?: string;
   description?: string;
@@ -18,4 +12,13 @@ export interface ISchedule {
   endDate?: string;
   intervalType?: string;
   timePeriod?: number;
+}
+
+export interface LogBE {
+  id: number;
+  startTime?: string;
+  endTime?: string;
+  status?: string;
+  serverName?: string;
+  scheduleId?: number;
 }

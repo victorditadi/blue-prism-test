@@ -2,45 +2,44 @@ import React from 'react';
 
 import { CheckCircle, TimesCircle } from '@styled-icons/fa-regular';
 
-import { convertObjectToArray, sliceAndUpperCaseString, showDescriptionValue } from './helpers';
+import { convertObjectToArray } from 'helpers';
 
 import {
   Container,
   CardHeader,
   CardContent,
   ScheduleName,
-  DescriptionContainer,
   CardDescriptionContainer,
-  DescriptionType,
   ButtonContainer,
   ButtonRetire,
 } from './styles';
-import { ISchedule } from '../helpers';
-import { DescriptionValue } from './descriptionValue';
 
-const mountCardDescription = (schedule: ISchedule) => {
+import { DescriptionItem } from 'components/descriptionItem';
+import { useUpdateSchedule } from 'store/context/schedules';
+import { ScheduleData } from 'store/services/schedules';
+import { useFilterLogs } from 'store/context/logs';
+
+const mountCardDescription = (schedule: ScheduleData) => {
   return convertObjectToArray(schedule).map((firstKey) => {
     if (schedule[firstKey] === schedule.name) return null;
+
     return (
-      <DescriptionContainer
-        data-testid={`schedule-${firstKey}-container`}
+      <DescriptionItem
         key={`schedule-${firstKey}-container`}
-      >
-        <DescriptionType data-testid={`schedule-${firstKey}-type`}>
-          {sliceAndUpperCaseString(firstKey)}:
-        </DescriptionType>{' '}
-        <DescriptionValue
-          data-testid={`schedule-${firstKey}-value`}
-          text={showDescriptionValue(schedule[firstKey])}
-        />
-      </DescriptionContainer>
+        type={'schedule'}
+        itemValue={schedule[firstKey]}
+        itemKey={firstKey}
+      />
     );
   });
 };
 
-const ScheduleCard = ({ schedule }: { schedule: ISchedule }) => {
+const ScheduleCard = ({ schedule }: { schedule: ScheduleData }) => {
+  const updateSchedule = useUpdateSchedule();
+  const { refetch } = useFilterLogs(schedule.id);
+
   return (
-    <Container key={schedule.id as number}>
+    <Container onClick={() => refetch()} key={schedule.id as number}>
       <CardHeader data-testid="card-header">
         {schedule.isRetired ? (
           <TimesCircle data-testid="retired-icon" size={'1.5vw'} />
@@ -52,7 +51,14 @@ const ScheduleCard = ({ schedule }: { schedule: ISchedule }) => {
       <CardContent>
         <CardDescriptionContainer>{mountCardDescription(schedule)}</CardDescriptionContainer>
         <ButtonContainer>
-          <ButtonRetire isRetired={schedule.isRetired} data-testid="retire-button">
+          <ButtonRetire
+            onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+              e.stopPropagation();
+              updateSchedule.mutate({ ...schedule, isRetired: !schedule.isRetired });
+            }}
+            isRetired={schedule.isRetired}
+            data-testid="retire-button"
+          >
             {schedule.isRetired ? 'unretire' : 'retire'}
           </ButtonRetire>
         </ButtonContainer>

@@ -1,17 +1,23 @@
 import { fireEvent, render } from '@testing-library/react';
 
 import Theme from 'css/theme';
-import { DescriptionValue } from '../descriptionValue';
+import { DescriptionItem } from '../DescriptionItem';
 
-describe('Component: DescriptionValue', () => {
+describe('Component: DescriptionItem', () => {
   const renderComponent = ({ text }: { text: string }) =>
     render(
       <Theme>
-        <DescriptionValue text={text} />
+        <DescriptionItem
+          key={`test-testType-container`}
+          data-testid={`test-testType-container`}
+          type={'test'}
+          itemValue={text}
+          itemKey={'testWithCamelCase'}
+        />
       </Theme>
     );
 
-  it('should render DescriptionValue component', () => {
+  it('should render DescriptionItem component', () => {
     const { asFragment } = renderComponent({ text: 'small text' });
     expect(asFragment()).toMatchSnapshot();
   });
@@ -21,12 +27,12 @@ describe('Component: DescriptionValue', () => {
     expect(queryByTestId('short-text')).toBeTruthy();
   });
 
-  it('should slice Text if Lenght > 25', () => {
+  it('should slice Text if Lenght > 10', () => {
     const { queryByTestId } = renderComponent({
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     });
 
-    expect(queryByTestId('short-text')?.textContent).toStrictEqual('Lorem ipsum dolor sit ame...');
+    expect(queryByTestId('short-text')?.textContent).toStrictEqual('Lorem ipsu...');
   });
 
   it('should not trigger tooltip outside mouseover', async () => {
@@ -47,5 +53,11 @@ describe('Component: DescriptionValue', () => {
 
     const tooltipContainer = queryByTestId('tooltip');
     expect(tooltipContainer).toBeVisible;
+  });
+
+  it('should slice and uppercase type description', () => {
+    const { queryByTestId } = renderComponent({ text: '' });
+    const descriptionContainer = queryByTestId(`test-testWithCamelCase-type`);
+    expect(descriptionContainer?.textContent).toStrictEqual('Test With Camel Case:');
   });
 });

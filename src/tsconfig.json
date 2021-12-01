@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "useUnknownInCatchVariables": false
   },
   "exclude": ["node_modules"],
   "include": [

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: DescriptionItem should render DescriptionItem component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.c1 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c2 {
+  font-size: 1em;
+  font-family: Robotosans-serif;
+}
+
+<span
+    class="c0"
+    data-testid="test-testWithCamelCase-container"
+  >
+    <span
+      class="c1"
+      data-testid="test-testWithCamelCase-type"
+    >
+      Test With Camel Case:
+    </span>
+    <div
+      class=""
+      data-testid="test-testWithCamelCase-value"
+    >
+      <span
+        class="c2"
+        data-testid="short-text"
+      >
+        small text
+      </span>
+    </div>
+  </span>
+</DocumentFragment>
+`;

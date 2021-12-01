@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Logs should render Logs component 1`] = `
+<DocumentFragment>
+  .c5 {
+  width: calc(100% * (1 / 4) - 20px);
+  height: calc(100%);
+  border: 1px solid black;
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.c7 {
+  -webkit-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.c8 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c11 {
+  font-size: 1em;
+  font-family: Robotosans-serif;
+}
+
+.c13 {
+  visibility: hidden;
+  display: none;
+}
+
+.c9 .c10:hover + .c12 {
+  visibility: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  background-color: #e8f5f9;
+  width: 15vw;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #d0e5ed;
+}
+
+.c0 {
+  height: 70vh;
+  position: relative;
+  margin: 0 5vw 0 5vw;
+  width: 100%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 100%;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.c4:after {
+  content: '';
+  width: 29.5vw;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.c2 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.c3 {
+  height: 50px;
+  width: 10vw;
+  border-radius: 30px;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #e8f5f9;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <span
+        class="c2"
+      >
+        Logs
+      </span>
+      <button
+        class="c3"
+        data-testid="show-all-logs-button"
+      >
+        Show all Logs
+      </button>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <span
+            class="c7"
+            data-testid="log-id-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-id-type"
+            >
+              Id:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-id-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                88578155
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-startTime-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-startTime-type"
+            >
+              Start Time:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-startTime-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                10/15/2021
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-endTime-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-endTime-type"
+            >
+              End Time:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-endTime-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                6/9/2021
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-status-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-status-type"
+            >
+              Status:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-status-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                Running
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-serverName-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-serverName-type"
+            >
+              Server Name:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-serverName-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                cillum
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-scheduleId-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-scheduleId-type"
+            >
+              Schedule Id:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-scheduleId-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                81112054
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <span
+            class="c7"
+            data-testid="log-id-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-id-type"
+            >
+              Id:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-id-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                36629794
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-startTime-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-startTime-type"
+            >
+              Start Time:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-startTime-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                8/5/2021
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-endTime-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-endTime-type"
+            >
+              End Time:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-endTime-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                4/6/2021
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-status-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-status-type"
+            >
+              Status:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-status-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                Exception
+              </span>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-serverName-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-serverName-type"
+            >
+              Server Name:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-serverName-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                deserunt p...
+              </span>
+              <div
+                class="c12 c13"
+                data-testid="tooltip"
+              >
+                deserunt pariatur
+              </div>
+            </div>
+          </span>
+          <span
+            class="c7"
+            data-testid="log-scheduleId-container"
+          >
+            <span
+              class="c8"
+              data-testid="log-scheduleId-type"
+            >
+              Schedule Id:
+            </span>
+            <div
+              class="c9"
+              data-testid="log-scheduleId-value"
+            >
+              <span
+                class="c10 c11"
+                data-testid="short-text"
+              >
+                52888597
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

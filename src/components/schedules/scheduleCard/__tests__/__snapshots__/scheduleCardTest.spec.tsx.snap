@@ -9,6 +9,7 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
 }
 
 .c0 {
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,6 +36,7 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   margin: 1vw;
+  text-align: center;
 }
 
 .c1 {
@@ -58,12 +60,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
   font-size: 1vw;
 }
 
-.c7 {
-  font-family: Robotosans-serif;
-  font-weight: bold;
-  font-size: 1em;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,15 +77,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
   justify-content: space-between;
 }
 
-.c6 {
-  -webkit-flex: 50%;
-  -ms-flex: 50%;
-  flex: 50%;
-  font-family: Robotosans-serif;
-  font-size: 1em;
-  margin-top: 8px;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -99,10 +86,14 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c14 {
@@ -112,6 +103,21 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
   font-family: Robotosans-serif;
   font-size: 1em;
   background-color: #34eb5c;
+}
+
+.c6 {
+  -webkit-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.c7 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 .c10 {
@@ -186,7 +192,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Id:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-id-value"
@@ -209,7 +214,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Description:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-description-value"
@@ -218,7 +222,7 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
               class="c9 c10"
               data-testid="short-text"
             >
-              amet consectetur dolore d...
+              amet conse...
             </span>
             <div
               class="c11 c12"
@@ -238,7 +242,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Is Retired:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-isRetired-value"
@@ -246,9 +249,7 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
             <span
               class="c9 c10"
               data-testid="short-text"
-            >
-              true
-            </span>
+            />
           </div>
         </span>
         <span
@@ -261,7 +262,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Tasks Count:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-tasksCount-value"
@@ -284,7 +284,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Start Point:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-startPoint-value"
@@ -293,8 +292,14 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
               class="c9 c10"
               data-testid="short-text"
             >
-              2021-12-05T12:51:42.685Z
+              2021-12-05...
             </span>
+            <div
+              class="c11 c12"
+              data-testid="tooltip"
+            >
+              2021-12-05T12:51:42.685Z
+            </div>
           </div>
         </span>
         <span
@@ -307,7 +312,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             End Point:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-endPoint-value"
@@ -316,8 +320,14 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
               class="c9 c10"
               data-testid="short-text"
             >
-              2021-01-04T10:32:13.462Z
+              2021-01-04...
             </span>
+            <div
+              class="c11 c12"
+              data-testid="tooltip"
+            >
+              2021-01-04T10:32:13.462Z
+            </div>
           </div>
         </span>
         <span
@@ -330,7 +340,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Day Of Week:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-dayOfWeek-value"
@@ -353,7 +362,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Day Of Month:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-dayOfMonth-value"
@@ -376,7 +384,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Start Date:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-startDate-value"
@@ -385,8 +392,14 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
               class="c9 c10"
               data-testid="short-text"
             >
-              2021-02-11T00:31:01.219Z
+              2021-02-11...
             </span>
+            <div
+              class="c11 c12"
+              data-testid="tooltip"
+            >
+              2021-02-11T00:31:01.219Z
+            </div>
           </div>
         </span>
         <span
@@ -399,7 +412,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             End Date:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-endDate-value"
@@ -408,8 +420,14 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
               class="c9 c10"
               data-testid="short-text"
             >
-              2021-06-25T06:49:02.658Z
+              2021-06-25...
             </span>
+            <div
+              class="c11 c12"
+              data-testid="tooltip"
+            >
+              2021-06-25T06:49:02.658Z
+            </div>
           </div>
         </span>
         <span
@@ -422,7 +440,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Interval Type:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-intervalType-value"
@@ -445,7 +462,6 @@ exports[`Component: ScheduleCard should render ScheduleCard component 1`] = `
           >
             Time Period:
           </span>
-           
           <div
             class="c8"
             data-testid="schedule-timePeriod-value"

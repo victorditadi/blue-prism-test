@@ -1,19 +1,29 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
 import Theme from 'css/theme';
 
 import { scheduleMock } from './scheduleMock';
 import { ScheduleCard } from '..';
-import { convertObjectToArray } from '../helpers';
+import { convertObjectToArray } from 'helpers';
+import { useUpdateSchedule } from 'store/context/schedules';
+import { QueryClientProvider, QueryClient } from 'react-query';
+
+const mockedUpdateSchedule = useUpdateSchedule as jest.Mock<unknown>;
+jest.mock('store/context/schedules');
 
 describe('Component: ScheduleCard', () => {
-  const renderComponent = ({ isRetired = true }: { isRetired?: boolean }) =>
-    render(
-      <Theme>
-        <ScheduleCard schedule={{ ...scheduleMock, isRetired: isRetired }} />
-      </Theme>
+  const renderComponent = ({ isRetired = true }: { isRetired?: boolean }) => {
+    const queryClient = new QueryClient();
+
+    return render(
+      <QueryClientProvider client={queryClient}>
+        <Theme>
+          <ScheduleCard schedule={{ ...scheduleMock, isRetired: isRetired }} />
+        </Theme>
+      </QueryClientProvider>
     );
+  };
 
   it('should render ScheduleCard component', () => {
     const { asFragment } = renderComponent({});
@@ -114,6 +124,21 @@ describe('Component: ScheduleCard', () => {
         'timePeriod',
       ];
       types.map((type) => expect(queryByTestId(`schedule-${type}-value`)).toBeTruthy());
+    });
+  });
+
+  describe('Component: Schedule Card - Retire Click', () => {
+    it('should update schedule when retire button is clicked', () => {
+      let mutationBeenCalled = false;
+      mockedUpdateSchedule.mockImplementation(() => ({
+        mutate: jest.fn().mockImplementation(() => (mutationBeenCalled = true)),
+      }));
+
+      const { getByTestId } = renderComponent({});
+
+      fireEvent.click(getByTestId('retire-button'));
+
+      expect(mutationBeenCalled).toBeTruthy();
     });
   });
 });

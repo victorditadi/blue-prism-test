@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: LogCard should render LogCard component 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: calc(100% * (1 / 4) - 20px);
+  height: calc(100%);
+  border: 1px solid black;
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.c3 {
+  font-family: Robotosans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c6 {
+  font-size: 1em;
+  font-family: Robotosans-serif;
+}
+
+.c8 {
+  visibility: hidden;
+  display: none;
+}
+
+.c4 .c5:hover + .c7 {
+  visibility: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-family: Robotosans-serif;
+  font-size: 1em;
+  background-color: #e8f5f9;
+  width: 15vw;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #d0e5ed;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <span
+        class="c2"
+        data-testid="log-id-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-id-type"
+        >
+          Id:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-id-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            88578155
+          </span>
+        </div>
+      </span>
+      <span
+        class="c2"
+        data-testid="log-startTime-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-startTime-type"
+        >
+          Start Time:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-startTime-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            2021-10-15...
+          </span>
+          <div
+            class="c7 c8"
+            data-testid="tooltip"
+          >
+            2021-10-15T13:13:08.525Z
+          </div>
+        </div>
+      </span>
+      <span
+        class="c2"
+        data-testid="log-endTime-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-endTime-type"
+        >
+          End Time:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-endTime-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            2021-06-09...
+          </span>
+          <div
+            class="c7 c8"
+            data-testid="tooltip"
+          >
+            2021-06-09T12:46:31.086Z
+          </div>
+        </div>
+      </span>
+      <span
+        class="c2"
+        data-testid="log-status-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-status-type"
+        >
+          Status:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-status-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            Running
+          </span>
+        </div>
+      </span>
+      <span
+        class="c2"
+        data-testid="log-serverName-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-serverName-type"
+        >
+          Server Name:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-serverName-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            cillum
+          </span>
+        </div>
+      </span>
+      <span
+        class="c2"
+        data-testid="log-scheduleId-container"
+      >
+        <span
+          class="c3"
+          data-testid="log-scheduleId-type"
+        >
+          Schedule Id:
+        </span>
+        <div
+          class="c4"
+          data-testid="log-scheduleId-value"
+        >
+          <span
+            class="c5 c6"
+            data-testid="short-text"
+          >
+            81112054
+          </span>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

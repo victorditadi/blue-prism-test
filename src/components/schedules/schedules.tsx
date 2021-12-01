@@ -1,12 +1,14 @@
 import React from 'react';
 
 import { ScheduleCard } from './scheduleCard';
-import { cleanDate, ISchedule } from './helpers';
+import { cleanDate } from 'helpers';
 
 import { Container, ScrollableContainer } from './styles';
+import { ScheduleData } from 'store/services/schedules';
+import { ScheduleSkeleton } from './schedulesSkeleton';
 
-const mountScheduleCard = (mock: ISchedule[]) => {
-  return mock.map((schedule) => {
+const mountScheduleCard = (schedules: ScheduleData[]) => {
+  return schedules.map((schedule) => {
     const scheduleForCard = {
       ...schedule,
       startPoint: cleanDate(schedule.startPoint),
@@ -19,10 +21,19 @@ const mountScheduleCard = (mock: ISchedule[]) => {
   });
 };
 
-const Schedules = ({ schedules }: { schedules: ISchedule[] }) => {
+const Schedules = ({
+  schedules,
+  isLoadingSchedules,
+}: {
+  schedules?: ScheduleData[];
+  isLoadingSchedules: boolean;
+}) => {
   return (
     <Container>
-      <ScrollableContainer>{mountScheduleCard(schedules)}</ScrollableContainer>
+      {isLoadingSchedules && <ScheduleSkeleton />}
+      {schedules && !isLoadingSchedules && (
+        <ScrollableContainer>{mountScheduleCard(schedules)}</ScrollableContainer>
+      )}
     </Container>
   );
 };
