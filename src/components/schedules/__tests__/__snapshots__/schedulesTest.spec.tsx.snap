@@ -165,6 +165,7 @@ exports[`Component: Schedules should render Schedules component 1`] = `
     >
       <div
         class="c2"
+        data-testid="schedule-container"
       >
         <div
           class="c3"
@@ -482,6 +483,7 @@ exports[`Component: Schedules should render Schedules component 1`] = `
       </div>
       <div
         class="c2"
+        data-testid="schedule-container"
       >
         <div
           class="c3"

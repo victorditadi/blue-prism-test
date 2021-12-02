@@ -4,9 +4,9 @@ import { ScheduleData, ScheduleService } from 'store/services/schedules';
 export const SCHEDULES_QUERY_KEY = 'SCHEDULES_QUERY_KEY';
 
 export const useSchedulesData = () => {
-  const { data, isLoading } = useQuery(SCHEDULES_QUERY_KEY, ScheduleService.fetchAll);
+  const { data, isLoading, isSuccess } = useQuery(SCHEDULES_QUERY_KEY, ScheduleService.fetchAll);
 
-  return { schedules: data, isLoading };
+  return { schedules: data, isLoading, isSuccess };
 };
 
 export const useUpdateSchedule = () => {
@@ -18,8 +18,6 @@ export const useUpdateSchedule = () => {
 
       // queryClient.setQueryData(['SCHEDULES_QUERY_KEY', newSchedule.id], newSchedule);
       queryClient.invalidateQueries(SCHEDULES_QUERY_KEY);
-
-      return newSchedule;
     },
   });
 };

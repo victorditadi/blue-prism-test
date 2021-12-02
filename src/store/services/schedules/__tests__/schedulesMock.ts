@@ -1,4 +1,4 @@
-const scheduleMock = [
+export const schedulesMock = [
   {
     id: 81112054,
     name: 'Random Schedule Name (0.2880763882796018)',
@@ -30,5 +30,3 @@ const scheduleMock = [
     timePeriod: 28,
   },
 ];
-
-export { scheduleMock };

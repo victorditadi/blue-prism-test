@@ -1,16 +1,26 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
+import { QueryClientProvider, QueryClient } from 'react-query';
 
 import Theme from 'css/theme';
 
 import { scheduleMock } from './scheduleMock';
 import { ScheduleCard } from '..';
-import { convertObjectToArray } from 'helpers';
+
 import { useUpdateSchedule } from 'store/context/schedules';
-import { QueryClientProvider, QueryClient } from 'react-query';
+import { useFilterLogs } from 'store/context/logs';
+
+import { convertObjectToArray } from 'helpers';
 
 const mockedUpdateSchedule = useUpdateSchedule as jest.Mock<unknown>;
 jest.mock('store/context/schedules');
+
+const mockedUseFilterLogs = useFilterLogs as jest.Mock<unknown>;
+jest.mock('store/context/logs');
+
+mockedUseFilterLogs.mockReturnValue({
+  refetch: jest.fn(),
+});
 
 describe('Component: ScheduleCard', () => {
   const renderComponent = ({ isRetired = true }: { isRetired?: boolean }) => {
@@ -127,7 +137,7 @@ describe('Component: ScheduleCard', () => {
     });
   });
 
-  describe('Component: Schedule Card - Retire Click', () => {
+  describe('Component: Schedule Card - Button Actions', () => {
     it('should update schedule when retire button is clicked', () => {
       let mutationBeenCalled = false;
       mockedUpdateSchedule.mockImplementation(() => ({
@@ -139,6 +149,19 @@ describe('Component: ScheduleCard', () => {
       fireEvent.click(getByTestId('retire-button'));
 
       expect(mutationBeenCalled).toBeTruthy();
+    });
+
+    it('should fire refetch when click in one schedule', () => {
+      let refetchHaveBeenCalled = false;
+      mockedUseFilterLogs.mockReturnValue({
+        refetch: jest.fn().mockImplementation(() => (refetchHaveBeenCalled = true)),
+      });
+
+      const { getByTestId } = renderComponent({});
+
+      fireEvent.click(getByTestId('schedule-container'));
+
+      expect(refetchHaveBeenCalled).toBeTruthy();
     });
   });
 });

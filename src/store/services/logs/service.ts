@@ -1,5 +1,6 @@
-import { Api } from 'external/api';
 import { AxiosError } from 'axios';
+
+import { Api } from 'external/api';
 import { LogsData, LogData } from '.';
 
 const LogsService = {

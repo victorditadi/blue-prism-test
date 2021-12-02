@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 import Theme from 'css/theme';
 
-import { logMock } from './logMock';
+import { logsMock } from './logsMock';
 import { Logs } from '..';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { useLogsData } from 'store/context/logs';
@@ -22,7 +22,7 @@ describe('Component: Logs', () => {
     return render(
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <Logs isLoadingLogs={isLoading} logs={logMock} />
+          <Logs isLoadingLogs={isLoading} logs={logsMock} />
         </Theme>
       </QueryClientProvider>
     );

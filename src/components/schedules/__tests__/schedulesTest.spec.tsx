@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import Theme from 'css/theme';
 
-import { scheduleMock } from './scheduleMock';
+import { schedulesMock } from './schedulesMock';
 import { Schedules } from '..';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -14,7 +14,7 @@ describe('Component: Schedules', () => {
     return render(
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <Schedules isLoadingSchedules={isLoading} schedules={scheduleMock} />
+          <Schedules isLoadingSchedules={isLoading} schedules={schedulesMock} />
         </Theme>
       </QueryClientProvider>
     );

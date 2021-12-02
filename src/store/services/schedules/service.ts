@@ -3,10 +3,10 @@ import { AxiosError } from 'axios';
 import { ScheduleData } from '.';
 
 const ScheduleService = {
-  fetchAll: async ({ pageParam = 0 }): Promise<ScheduleData[]> => {
+  fetchAll: async (): Promise<ScheduleData[]> => {
     try {
       return await (
-        await Api.get(`/schedules?_page=${pageParam}`)
+        await Api.get(`/schedules`)
       ).data;
     } catch (e) {
       if ((e as AxiosError).isAxiosError) {

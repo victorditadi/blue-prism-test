@@ -39,7 +39,11 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleData }) => {
   const { refetch } = useFilterLogs(schedule.id);
 
   return (
-    <Container onClick={() => refetch()} key={schedule.id as number}>
+    <Container
+      data-testid="schedule-container"
+      onClick={() => refetch()}
+      key={schedule.id as number}
+    >
       <CardHeader data-testid="card-header">
         {schedule.isRetired ? (
           <TimesCircle data-testid="retired-icon" size={'1.5vw'} />

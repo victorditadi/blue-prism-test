@@ -4,13 +4,13 @@ import { LogsService } from 'store/services/logs';
 export const LOGS_QUERY_KEY = 'LOGS_QUERY_KEY';
 
 export const useLogsData = () => {
-  const { data, isLoading, refetch } = useQuery(LOGS_QUERY_KEY, LogsService.fetchAll);
+  const { data, isLoading, refetch, isSuccess } = useQuery(LOGS_QUERY_KEY, LogsService.fetchAll);
 
-  return { logs: data, isLoading, refetch };
+  return { logs: data, isLoading, refetch, isSuccess };
 };
 
 export const useFilterLogs = (scheduleId: number) => {
-  const { data, isLoading, refetch } = useQuery(
+  const { data, isLoading, refetch, isSuccess } = useQuery(
     LOGS_QUERY_KEY,
     () => LogsService.fetchByScheduleId(scheduleId),
     {
@@ -19,5 +19,5 @@ export const useFilterLogs = (scheduleId: number) => {
     }
   );
 
-  return { logs: data, isLoading, refetch };
+  return { logs: data, isLoading, refetch, isSuccess };
 };

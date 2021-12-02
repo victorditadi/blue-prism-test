@@ -1,4 +1,4 @@
-const logMock = [
+const logsMock = [
   {
     id: 88578155,
     startTime: '2021-10-15T13:13:08.525Z',
@@ -17,4 +17,4 @@ const logMock = [
   },
 ];
 
-export { logMock };
+export { logsMock };
