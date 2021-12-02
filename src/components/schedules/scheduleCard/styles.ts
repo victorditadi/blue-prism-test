@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ isSelected: boolean }>`
   cursor: pointer;
   display: flex;
   border: 1px solid black;
@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 20vw;
   margin-top: 1vw;
+  background-color: ${(props) => (props.isSelected ? props.theme.colors.cyanDarker : 'white')};
 `;
 export const CardContent = styled.div`
   display: flex;
@@ -25,8 +26,15 @@ export const CardHeader = styled.div`
 
 export const ScheduleName = styled.span`
   margin-left: 1vw;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1vw;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.size.mediumSmall};
+`;
+
+export const ScheduleSelected = styled.span`
+  margin-left: 1vw;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.size.mediumSmall};
+  color: ${(props) => props.theme.colors.orange};
 `;
 
 export const CardDescriptionContainer = styled.div`

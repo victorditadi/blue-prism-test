@@ -14,6 +14,7 @@ const theme: DefaultTheme = {
     secondary: '',
     cyan: '#e8f5f9',
     cyanDarker: '#d0e5ed',
+    orange: '#ff9900',
   },
 };
 

@@ -5,6 +5,7 @@ export const Container = styled.span`
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.size.small};
   margin-top: 8px;
+  position: relative;
 `;
 
 export const DescriptionType = styled.span`
@@ -24,16 +25,17 @@ export const TooltipContainer = styled.div`
 `;
 
 export const DescriptionValueContainer = styled.div`
-  ${DescriptionValue}:hover + ${TooltipContainer} {
+  ${DescriptionValue}:hover ~ ${TooltipContainer} {
     visibility: visible;
     display: flex;
     position: absolute;
     font-family: ${(props) => props.theme.font};
     font-size: ${(props) => props.theme.size.small};
     background-color: ${(props) => props.theme.colors.cyan};
-    width: 15vw;
+    width: 100%;
     padding: 10px 10px;
     border-radius: 4px;
     border: 1px solid ${(props) => props.theme.colors.cyanDarker};
+    z-index: 9999;
   }
 `;

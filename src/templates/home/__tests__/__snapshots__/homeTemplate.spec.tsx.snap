@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template: Home should render template home 1`] = `
+<HomeTemplate
+  isLoadingLogs={false}
+  isLoadingSchedules={false}
+  logs={
+    Array [
+      Object {
+        "endTime": "2021-06-09T12:46:31.086Z",
+        "id": 88578155,
+        "scheduleId": 81112054,
+        "serverName": "cillum",
+        "startTime": "2021-10-15T13:13:08.525Z",
+        "status": "Running",
+      },
+      Object {
+        "endTime": "2021-04-05T23:13:29.297Z",
+        "id": 36629794,
+        "scheduleId": 52888597,
+        "serverName": "deserunt pariatur",
+        "startTime": "2021-08-05T06:53:28.924Z",
+        "status": "Exception",
+      },
+    ]
+  }
+  schedules={
+    Array [
+      Object {
+        "dayOfMonth": 10,
+        "dayOfWeek": 3,
+        "description": "amet consectetur dolore do esse",
+        "endDate": "2021-06-25T06:49:02.658Z",
+        "endPoint": "2021-01-04T10:32:13.462Z",
+        "id": 81112054,
+        "intervalType": "Week",
+        "isRetired": true,
+        "name": "Random Schedule Name (0.2880763882796018)",
+        "startDate": "2021-02-11T00:31:01.219Z",
+        "startPoint": "2021-12-05T12:51:42.685Z",
+        "tasksCount": 10,
+        "timePeriod": 28,
+      },
+      Object {
+        "dayOfMonth": 10,
+        "dayOfWeek": 3,
+        "description": "amet consectetur dolore do esse",
+        "endDate": "2021-06-25T06:49:02.658Z",
+        "endPoint": "2021-01-04T10:32:13.462Z",
+        "id": 8111054,
+        "intervalType": "Week",
+        "isRetired": true,
+        "name": "Random Schedule Name (0.2880763882796018)",
+        "startDate": "2021-02-11T00:31:01.219Z",
+        "startPoint": "2021-12-05T12:51:42.685Z",
+        "tasksCount": 10,
+        "timePeriod": 28,
+      },
+    ]
+  }
+/>
+`;

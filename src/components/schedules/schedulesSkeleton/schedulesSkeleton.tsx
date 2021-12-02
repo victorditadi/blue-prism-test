@@ -1,18 +1,15 @@
+import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-import styled from 'styled-components';
-
-const SimpleDiv = styled.div`
-  margin-top: 1vw;
-`;
+import { DiviseDiv } from './styles';
 
 const ScheduleSkeleton = () => {
   return (
     <div data-testid="schedules-skeleton">
       <Skeleton height={'20px'} width={'20vw'} count={10} style={{ marginTop: '0.5vw' }} />
-      <SimpleDiv />
+      <DiviseDiv />
       <Skeleton height={'20px'} width={'20vw'} count={10} style={{ marginTop: '0.5vw' }} />
-      <SimpleDiv />
+      <DiviseDiv />
     </div>
   );
 };

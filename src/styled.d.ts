@@ -8,6 +8,7 @@ declare module 'styled-components' {
       secondary: string;
       cyan: string;
       cyanDarker: string;
+      orange: string;
     };
     size: {
       small: string;

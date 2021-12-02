@@ -12,12 +12,13 @@ import {
   CardDescriptionContainer,
   ButtonContainer,
   ButtonRetire,
+  ScheduleSelected,
 } from './styles';
 
 import { DescriptionItem } from 'components/descriptionItem';
 import { useUpdateSchedule } from 'store/context/schedules';
 import { ScheduleData } from 'store/services/schedules';
-import { useFilterLogs } from 'store/context/logs';
+import { useFilterLogs, useLogsData } from 'store/context/logs';
 
 const mountCardDescription = (schedule: ScheduleData) => {
   return convertObjectToArray(schedule).map((firstKey) => {
@@ -34,14 +35,27 @@ const mountCardDescription = (schedule: ScheduleData) => {
   });
 };
 
-const ScheduleCard = ({ schedule }: { schedule: ScheduleData }) => {
+const ScheduleCard = ({
+  schedule,
+  selectScheduleAction,
+  isSelected,
+}: {
+  schedule: ScheduleData;
+  selectScheduleAction: (scheduleId: number | null) => void;
+  isSelected: boolean;
+}) => {
   const updateSchedule = useUpdateSchedule();
-  const { refetch } = useFilterLogs(schedule.id);
+  const { refetch: refetchFilterLog } = useFilterLogs(schedule.id);
+  const { refetch: refetchAllLogs } = useLogsData();
 
   return (
     <Container
+      isSelected={isSelected}
       data-testid="schedule-container"
-      onClick={() => refetch()}
+      onClick={() => {
+        isSelected ? refetchAllLogs() : refetchFilterLog();
+        selectScheduleAction(!isSelected ? schedule.id : null);
+      }}
       key={schedule.id as number}
     >
       <CardHeader data-testid="card-header">
@@ -51,6 +65,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleData }) => {
           <CheckCircle data-testid="unretired-icon" size={'1.5vw'} />
         )}
         {schedule.name && <ScheduleName data-testid="schedule-name">{schedule.name}</ScheduleName>}
+        {isSelected && <ScheduleSelected>SELECTED</ScheduleSelected>}
       </CardHeader>
       <CardContent>
         <CardDescriptionContainer>{mountCardDescription(schedule)}</CardDescriptionContainer>

@@ -4,15 +4,22 @@ import { ScheduleData, ScheduleService } from 'store/services/schedules';
 export const SCHEDULES_QUERY_KEY = 'SCHEDULES_QUERY_KEY';
 
 export const useSchedulesData = () => {
-  const { data, isLoading, isSuccess } = useQuery(SCHEDULES_QUERY_KEY, ScheduleService.fetchAll);
+  const { data, isLoading, isSuccess, isError } = useQuery(
+    SCHEDULES_QUERY_KEY,
+    ScheduleService.fetchAll,
+    {
+      retry: false,
+    }
+  );
 
-  return { schedules: data, isLoading, isSuccess };
+  return { schedules: data, isLoading, isSuccess, isError };
 };
 
 export const useUpdateSchedule = () => {
   const queryClient = useQueryClient();
 
   return useMutation((newSchedule: ScheduleData) => ScheduleService.updateSchedule(newSchedule), {
+    retry: false,
     onSuccess: async (newSchedule) => {
       await queryClient.cancelQueries([SCHEDULES_QUERY_KEY, newSchedule.id]);
 

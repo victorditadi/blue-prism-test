@@ -20,8 +20,9 @@ const DescriptionItem = ({
 }) => {
   const valueIsString = typeof itemValue === 'string';
   const tooltipOn = valueIsString ? itemValue.length > 10 : false;
-  const shortText = valueIsString && tooltipOn ? `${itemValue.slice(0, 10)}...` : itemValue;
-
+  const shortText =
+    valueIsString && tooltipOn ? `${itemValue.slice(0, 10)}...` : itemValue?.toString();
+  console.log(shortText);
   return (
     <Container data-testid={`${type}-${itemKey}-container`}>
       <DescriptionType data-testid={`${type}-${itemKey}-type`}>

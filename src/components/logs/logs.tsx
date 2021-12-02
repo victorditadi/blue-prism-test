@@ -2,18 +2,13 @@ import React from 'react';
 
 import { LogCard } from './logCard';
 
+import { LogsSkeleton } from './logsSkeleton';
+import { LogsError } from './logsError';
+
 import { LogData } from 'store/services/logs';
 import { cleanDate } from 'helpers';
 
-import {
-  Container,
-  ScrollableContainer,
-  LogSectionHeader,
-  LogSectionTitle,
-  LogSectionButton,
-} from './styles';
-import { LogsSkeleton } from './logsSkeleton';
-import { useLogsData } from 'store/context/logs';
+import { Container, ScrollableContainer, LogSectionHeader, LogSectionTitle } from './styles';
 
 const mountLogsCard = (logs: LogData[]) => {
   return logs.map((log) => {
@@ -26,17 +21,21 @@ const mountLogsCard = (logs: LogData[]) => {
   });
 };
 
-const Logs = ({ logs, isLoadingLogs }: { logs?: LogData[]; isLoadingLogs: boolean }) => {
-  const { refetch } = useLogsData();
-
+const Logs = ({
+  logs,
+  isLoadingLogs,
+  isErrorLogs,
+}: {
+  logs?: LogData[];
+  isLoadingLogs: boolean;
+  isErrorLogs: boolean;
+}) => {
   return (
     <Container>
-      {!isLoadingLogs && (
+      {!isLoadingLogs && isErrorLogs && <LogsError />}
+      {!isLoadingLogs && !isErrorLogs && (
         <LogSectionHeader>
           <LogSectionTitle>Logs</LogSectionTitle>
-          <LogSectionButton data-testid="show-all-logs-button" onClick={() => refetch()}>
-            Show all Logs
-          </LogSectionButton>
         </LogSectionHeader>
       )}
       {isLoadingLogs && <LogsSkeleton />}

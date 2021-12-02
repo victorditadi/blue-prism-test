@@ -10,22 +10,30 @@ import { LogData } from 'store/services/logs';
 const HomeTemplate = ({
   schedules,
   isLoadingSchedules,
+  isErrorSchedules,
   logs,
   isLoadingLogs,
+  isErrorLogs,
 }: {
   schedules?: ScheduleData[];
   isLoadingSchedules: boolean;
+  isErrorSchedules: boolean;
   logs?: LogData[];
   isLoadingLogs: boolean;
+  isErrorLogs: boolean;
 }) => {
   return (
     <Container>
       <ScheduleContainer>
-        <Schedules isLoadingSchedules={isLoadingSchedules} schedules={schedules} />
+        <Schedules
+          schedules={schedules}
+          isLoadingSchedules={isLoadingSchedules}
+          isErrorSchedules={isErrorSchedules}
+        />
       </ScheduleContainer>
 
       <LogRecordsContainer>
-        <Logs logs={logs} isLoadingLogs={isLoadingLogs} />
+        <Logs logs={logs} isLoadingLogs={isLoadingLogs} isErrorLogs={isErrorLogs} />
       </LogRecordsContainer>
     </Container>
   );

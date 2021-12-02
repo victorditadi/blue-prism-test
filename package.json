@@ -4,7 +4,7 @@
   "scripts": {
     "build": "yarn clean && next build",
     "clean": "rimraf .next/",
-    "dev": "next dev ./src --port 3001",
+    "dev": "next dev ./src --port 3000",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "start": "NODE_ENV=production next start",
     "cypress:open": "cypress open",
