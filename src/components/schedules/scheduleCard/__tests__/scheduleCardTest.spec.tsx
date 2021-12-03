@@ -8,7 +8,7 @@ import { scheduleMock } from './scheduleMock';
 import { ScheduleCard } from '..';
 
 import { useUpdateSchedule } from 'store/context/schedules';
-import { useFilterLogs } from 'store/context/logs';
+import { useFilterLogs, useLogsData } from 'store/context/logs';
 
 import { convertObjectToArray } from 'helpers';
 
@@ -16,9 +16,15 @@ const mockedUpdateSchedule = useUpdateSchedule as jest.Mock<unknown>;
 jest.mock('store/context/schedules');
 
 const mockedUseFilterLogs = useFilterLogs as jest.Mock<unknown>;
+const mockedUseLogsData = useLogsData as jest.Mock<unknown>;
+
 jest.mock('store/context/logs');
 
 mockedUseFilterLogs.mockReturnValue({
+  refetch: jest.fn(),
+});
+
+mockedUseLogsData.mockReturnValue({
   refetch: jest.fn(),
 });
 
@@ -29,7 +35,11 @@ describe('Component: ScheduleCard', () => {
     return render(
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <ScheduleCard schedule={{ ...scheduleMock, isRetired: isRetired }} />
+          <ScheduleCard
+            isSelected={false}
+            selectScheduleAction={jest.fn()}
+            schedule={{ ...scheduleMock, isRetired: isRetired }}
+          />
         </Theme>
       </QueryClientProvider>
     );

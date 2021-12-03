@@ -1,5 +1,6 @@
 import React from 'react';
 import { GlobalStyle } from 'css/styles';
+import Theme from 'css/theme';
 
 import { Header } from '../header';
 import { Container, ContentContainer } from './styles';
@@ -11,9 +12,11 @@ interface IPrivateLayout {
 const Layout = (props: IPrivateLayout): JSX.Element => {
   return (
     <Container>
-      <GlobalStyle />
-      <Header />
-      <ContentContainer>{props.children}</ContentContainer>
+      <Theme>
+        <GlobalStyle />
+        <Header />
+        <ContentContainer>{props.children}</ContentContainer>
+      </Theme>
     </Container>
   );
 };

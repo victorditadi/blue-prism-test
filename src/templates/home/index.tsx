@@ -3,7 +3,7 @@ import React from 'react';
 import { Schedules } from 'components/schedules';
 import { Logs } from 'components/logs';
 
-import { Container, ScheduleContainer, LogRecordsContainer } from './styles';
+import { Container, ScheduleContainer, LogContainer } from './styles';
 import { ScheduleData } from 'store/services/schedules';
 import { LogData } from 'store/services/logs';
 
@@ -32,9 +32,9 @@ const HomeTemplate = ({
         />
       </ScheduleContainer>
 
-      <LogRecordsContainer>
+      <LogContainer>
         <Logs logs={logs} isLoadingLogs={isLoadingLogs} isErrorLogs={isErrorLogs} />
-      </LogRecordsContainer>
+      </LogContainer>
     </Container>
   );
 };

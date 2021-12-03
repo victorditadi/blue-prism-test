@@ -2,15 +2,16 @@
 
 exports[`Component: Logs should render Logs component 1`] = `
 <DocumentFragment>
-  .c5 {
+  .c4 {
   width: calc(100% * (1 / 4) - 20px);
   height: calc(100%);
-  border: 1px solid black;
+  border: 1px solid #d0e5ed;
   margin-bottom: 1vw;
   padding: 1vw;
+  background-color: #e8f5f9;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,32 +29,33 @@ exports[`Component: Logs should render Logs component 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c6 {
   -webkit-flex: 50%;
   -ms-flex: 50%;
   flex: 50%;
   font-family: Robotosans-serif;
   font-size: 1em;
   margin-top: 8px;
+  position: relative;
 }
 
-.c8 {
+.c7 {
   font-family: Robotosans-serif;
   font-weight: bold;
   font-size: 1em;
 }
 
-.c11 {
+.c10 {
   font-size: 1em;
   font-family: Robotosans-serif;
 }
 
-.c13 {
+.c12 {
   visibility: hidden;
   display: none;
 }
 
-.c9 .c10:hover + .c12 {
+.c8 .c9:hover ~ .c11 {
   visibility: visible;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,10 +65,11 @@ exports[`Component: Logs should render Logs component 1`] = `
   font-family: Robotosans-serif;
   font-size: 1em;
   background-color: #e8f5f9;
-  width: 15vw;
+  width: 100%;
   padding: 10px 10px;
   border-radius: 4px;
   border: 1px solid #d0e5ed;
+  z-index: 9999;
 }
 
 .c0 {
@@ -76,7 +79,7 @@ exports[`Component: Logs should render Logs component 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +96,7 @@ exports[`Component: Logs should render Logs component 1`] = `
   overflow-y: scroll;
 }
 
-.c4:after {
+.c3:after {
   content: '';
   width: 29.5vw;
 }
@@ -116,16 +119,6 @@ exports[`Component: Logs should render Logs component 1`] = `
   font-size: 2em;
 }
 
-.c3 {
-  height: 50px;
-  width: 10vw;
-  border-radius: 30px;
-  font-family: Robotosans-serif;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #e8f5f9;
-}
-
 <div
     class="c0"
   >
@@ -137,38 +130,32 @@ exports[`Component: Logs should render Logs component 1`] = `
       >
         Logs
       </span>
-      <button
-        class="c3"
-        data-testid="show-all-logs-button"
-      >
-        Show all Logs
-      </button>
     </div>
     <div
-      class="c4"
+      class="c3"
     >
       <div
-        class="c5"
+        class="c4"
       >
         <div
-          class="c6"
+          class="c5"
         >
           <span
-            class="c7"
+            class="c6"
             data-testid="log-id-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-id-type"
             >
               Id:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-id-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 88578155
@@ -176,21 +163,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-startTime-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-startTime-type"
             >
               Start Time:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-startTime-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 10/15/2021
@@ -198,21 +185,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-endTime-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-endTime-type"
             >
               End Time:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-endTime-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 6/9/2021
@@ -220,21 +207,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-status-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-status-type"
             >
               Status:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-status-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 Running
@@ -242,21 +229,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-serverName-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-serverName-type"
             >
               Server Name:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-serverName-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 cillum
@@ -264,21 +251,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-scheduleId-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-scheduleId-type"
             >
               Schedule Id:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-scheduleId-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 81112054
@@ -288,27 +275,27 @@ exports[`Component: Logs should render Logs component 1`] = `
         </div>
       </div>
       <div
-        class="c5"
+        class="c4"
       >
         <div
-          class="c6"
+          class="c5"
         >
           <span
-            class="c7"
+            class="c6"
             data-testid="log-id-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-id-type"
             >
               Id:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-id-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 36629794
@@ -316,21 +303,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-startTime-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-startTime-type"
             >
               Start Time:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-startTime-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 8/5/2021
@@ -338,21 +325,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-endTime-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-endTime-type"
             >
               End Time:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-endTime-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 4/6/2021
@@ -360,21 +347,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-status-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-status-type"
             >
               Status:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-status-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 Exception
@@ -382,27 +369,27 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-serverName-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-serverName-type"
             >
               Server Name:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-serverName-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 deserunt p...
               </span>
               <div
-                class="c12 c13"
+                class="c11 c12"
                 data-testid="tooltip"
               >
                 deserunt pariatur
@@ -410,21 +397,21 @@ exports[`Component: Logs should render Logs component 1`] = `
             </div>
           </span>
           <span
-            class="c7"
+            class="c6"
             data-testid="log-scheduleId-container"
           >
             <span
-              class="c8"
+              class="c7"
               data-testid="log-scheduleId-type"
             >
               Schedule Id:
             </span>
             <div
-              class="c9"
+              class="c8"
               data-testid="log-scheduleId-value"
             >
               <span
-                class="c10 c11"
+                class="c9 c10"
                 data-testid="short-text"
               >
                 52888597

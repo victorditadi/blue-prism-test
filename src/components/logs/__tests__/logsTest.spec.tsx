@@ -1,28 +1,26 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Theme from 'css/theme';
 
 import { logsMock } from './logsMock';
 import { Logs } from '..';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { useLogsData } from 'store/context/logs';
-
-const mockedUseLogsData = useLogsData as jest.Mock<unknown>;
-jest.mock('store/context/logs');
-
-mockedUseLogsData.mockReturnValue({
-  refetch: jest.fn(),
-});
 
 describe('Component: Logs', () => {
-  const renderComponent = ({ isLoading = false }: { isLoading?: boolean }) => {
+  const renderComponent = ({
+    isError = false,
+    isLoading = false,
+  }: {
+    isError?: boolean;
+    isLoading?: boolean;
+  }) => {
     const queryClient = new QueryClient();
 
     return render(
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <Logs isLoadingLogs={isLoading} logs={logsMock} />
+          <Logs isErrorLogs={isError} isLoadingLogs={isLoading} logs={logsMock} />
         </Theme>
       </QueryClientProvider>
     );
@@ -44,16 +42,8 @@ describe('Component: Logs', () => {
     expect(queryByTestId('logs-skeleton')).not.toBeInTheDocument();
   });
 
-  it('should fire refetch when Show all Logs is clicked', () => {
-    let refetchHaveBeenCalled = false;
-    mockedUseLogsData.mockReturnValue({
-      refetch: jest.fn().mockImplementation(() => (refetchHaveBeenCalled = true)),
-    });
-
-    const { getByTestId } = renderComponent({});
-
-    fireEvent.click(getByTestId('show-all-logs-button'));
-
-    expect(refetchHaveBeenCalled).toBeTruthy();
+  it('should render error if have error', () => {
+    const { queryByTestId } = renderComponent({ isError: true });
+    expect(queryByTestId('logs-error')).toBeInTheDocument();
   });
 });

@@ -18,7 +18,7 @@ const theme: DefaultTheme = {
   },
 };
 
-const Theme = ({ children }: { children: JSX.Element }) => (
+const Theme = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 

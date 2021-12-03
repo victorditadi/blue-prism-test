@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { Layout } from 'components/shared/layout/';
-import Theme from 'css/theme';
 
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -22,13 +21,12 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Theme>
-        <QueryClientProvider client={queryClient}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </QueryClientProvider>
-      </Theme>
+
+      <QueryClientProvider client={queryClient}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </QueryClientProvider>
     </>
   );
 };

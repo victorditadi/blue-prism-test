@@ -8,13 +8,23 @@ import { Schedules } from '..';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 describe('Component: Schedules', () => {
-  const renderComponent = ({ isLoading = false }: { isLoading?: boolean }) => {
+  const renderComponent = ({
+    isLoading = false,
+    isError = false,
+  }: {
+    isLoading?: boolean;
+    isError?: boolean;
+  }) => {
     const queryClient = new QueryClient();
 
     return render(
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <Schedules isLoadingSchedules={isLoading} schedules={schedulesMock} />
+          <Schedules
+            isErrorSchedules={isError}
+            isLoadingSchedules={isLoading}
+            schedules={schedulesMock}
+          />
         </Theme>
       </QueryClientProvider>
     );
@@ -29,6 +39,11 @@ describe('Component: Schedules', () => {
   it('should render skeleton if is loading', () => {
     const { queryByTestId } = renderComponent({ isLoading: true });
     expect(queryByTestId('schedules-skeleton')).toBeInTheDocument();
+  });
+
+  it('should render error if have error', () => {
+    const { queryByTestId } = renderComponent({ isError: true });
+    expect(queryByTestId('schedules-error')).toBeInTheDocument();
   });
 
   it('should not render skeleton if is not loading', () => {

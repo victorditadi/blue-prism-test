@@ -5,9 +5,10 @@ exports[`Component: LogCard should render LogCard component 1`] = `
   .c0 {
   width: calc(100% * (1 / 4) - 20px);
   height: calc(100%);
-  border: 1px solid black;
+  border: 1px solid #d0e5ed;
   margin-bottom: 1vw;
   padding: 1vw;
+  background-color: #e8f5f9;
 }
 
 .c1 {
@@ -35,6 +36,7 @@ exports[`Component: LogCard should render LogCard component 1`] = `
   font-family: Robotosans-serif;
   font-size: 1em;
   margin-top: 8px;
+  position: relative;
 }
 
 .c3 {
@@ -53,7 +55,7 @@ exports[`Component: LogCard should render LogCard component 1`] = `
   display: none;
 }
 
-.c4 .c5:hover + .c7 {
+.c4 .c5:hover ~ .c7 {
   visibility: visible;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,10 +65,11 @@ exports[`Component: LogCard should render LogCard component 1`] = `
   font-family: Robotosans-serif;
   font-size: 1em;
   background-color: #e8f5f9;
-  width: 15vw;
+  width: 100%;
   padding: 10px 10px;
   border-radius: 4px;
   border: 1px solid #d0e5ed;
+  z-index: 9999;
 }
 
 <div

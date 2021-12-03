@@ -5,7 +5,7 @@ import { Container, ErrorText } from './styles';
 
 const LogsError = () => {
   return (
-    <Container>
+    <Container data-testid={'logs-error'}>
       <ExclamationCircle size={'2vw'} />
       <ErrorText>Ops...please, try again later</ErrorText>
     </Container>

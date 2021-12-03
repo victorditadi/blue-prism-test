@@ -10,7 +10,7 @@ export const ScheduleContainer = styled.div`
   width: 100%;
 `;
 
-export const LogRecordsContainer = styled.div`
+export const LogContainer = styled.div`
   flex: 0.8;
   display: flex;
   width: 100%;

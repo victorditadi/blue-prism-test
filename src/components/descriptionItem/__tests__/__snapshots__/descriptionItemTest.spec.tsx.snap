@@ -9,6 +9,7 @@ exports[`Component: DescriptionItem should render DescriptionItem component 1`] 
   font-family: Robotosans-serif;
   font-size: 1em;
   margin-top: 8px;
+  position: relative;
 }
 
 .c1 {
