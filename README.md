@@ -8,7 +8,7 @@ This is a Project for BluePrism recruitment process.
 - Typescript
 - react-query
 - styled-component
-  - Theme and Components
+- Theme and Components
 
 ## Environment
 
@@ -20,11 +20,15 @@ This is a Project for BluePrism recruitment process.
 
 ## Host
 
-- Amplify
+- Vercel
 
 ## Commit
 
 Install Commitzen globally
+
+# Back-end Changes
+
+Instead of using JSON-SERVER, I create a tiny API inside NextJS to be the Backend. In this case, I could simplify the test deployment by just using one application and better visualization for who is looking.
 
 # Things I could improve
 
@@ -32,24 +36,24 @@ Install Commitzen globally
 - Increase the theme file to have a higher standard (border radius, etc.)
 - Better organize the commits (Commit per Component or Layer maybe)
 - Test Helpers functions
-- Improve UI - Being transparency, it's not my Strong Skills, so, to have a better UI I will probably create a FIGMA file, to help visualize.
-- For some reason, setQueryData for only update one item was not working, so to continue with the test I invalidate the whole QUERY_KEY.
-- Pagination and Infinite Scroll is essencial for this project, but the Backend have pagination in their filter, but don't return the current page, so to not complicated, I didn't go far, but is this case is very essential expecially in the Logs.
+- Improve UI - Being transparent, it's not my Strong Skill, so to have a better UI, I will probably create a FIGMA file to help visualize.
+- For some reason, setQueryData for only updating one item was not working, so to continue with the test, I invalidated the whole QUERY_KEY.
+- Pagination and Infinite Scroll is essential for this project. The Backend has pagination but doesn't return the current page, so to not complicated, I didn't go far, but in this case is essential, expecially in the Logs.
 - Create e2e using Cypress.
 
 # Architecture
 
-I follow a very familiar architecture that i have design in Grupo Globo streaming products.
+I follow a very familiar architecture I have designed in Grupo Globo streaming products.
 
 ![alt text](https://i.imgur.com/bUguegZ.png)
 
 **Pages**:
-Because i'm using NextJS, the pages folder is where NextJS makes the routing. Is responsible also for connect the data layer with presentation layer
+Because I'm using NextJS, the pages folder is where NextJS makes the routing. It is responsible also for connecting the data layer with the presentation layer.
 
 Data Layer: Layer responsible for granted data or states.
 
-- Query Hook: Simple Hook which will delivery Data and state about the request. (isLoading, isError)
-- Store: Using react-query I have the services which is responsible for the request and the context which where we save the data for queries.
+- Query Hook: Simple Hook, which will deliver Data and state about the request. (isLoading, isError)
+- Store: Using react-query, I have the services responsible for the request and the context where we save the data for queries.
 - External: All implementation with external products, since API or Analytics.
 
 Presentation Layer: Layer responsible for all the UI.
