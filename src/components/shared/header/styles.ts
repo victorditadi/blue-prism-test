@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 export const HeaderTitle = styled.span`
-  font-family: Roboto;
-  font-size: 3vw;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.size.large};
 `;
 export const HeaderMenu = styled.div``;

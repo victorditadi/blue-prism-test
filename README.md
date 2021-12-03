@@ -40,6 +40,7 @@ Instead of using JSON-SERVER, I create a tiny API inside NextJS to be the Backen
 - For some reason, setQueryData for only updating one item was not working, so to continue with the test, I invalidated the whole QUERY_KEY.
 - Pagination and Infinite Scroll is essential for this project. The Backend has pagination but doesn't return the current page, so to not complicated, I didn't go far, but in this case is essential, expecially in the Logs.
 - Create e2e using Cypress.
+- This kind of page architecture (two scrolls side-by-side) it's a not good experience for mobile devices, so in this case, I willed to talk with the UX/UI to create a new experience for mobile devices instead of being responsive
 
 # Architecture
 
